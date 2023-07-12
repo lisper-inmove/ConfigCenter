@@ -1,1 +1,16 @@
 #+STARTUP: indent
+
+* Steps
+#+begin_verse
+1. pip install -r require.txt
+2. pip install uwsgi: 我使用miniconda, python3.11版本, 会无法使用pip install uwsgi的情况,需要行 =conda install -c conda-forge uwsgi=, 之后再 =pip install uwsgi=
+3. PORT=3333 make uwsgi
+#+end_verse
+#+begin_src shell
+  # use config_db
+  db.configs.ensureIndex({"applicationId": 1}, {"unique": true})
+
+  # use application_db
+  db.applications.ensureIndex({"id": 1}, {"unique": true})
+  db.applications.ensureIndex({"name": 1}, {"unique": true})
+#+end_src
