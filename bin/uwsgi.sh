@@ -26,6 +26,7 @@ generate_ini () {
     listen = 1024
     chdir = src
     virtualenv = $HOME/miniconda3/envs/ConfigCenter
+    daemonize = uwsgi.log
 EOF
 }
 

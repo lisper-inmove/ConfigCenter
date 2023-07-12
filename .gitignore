@@ -6,3 +6,5 @@ proto/*.py
 *_pb2.py
 *.~undo-tree~
 bin/server.ini
+uwsgi.log
+uwsgi.pid
